@@ -18,11 +18,12 @@ def enviar_email(txt1,txt2):
 
     subject = 'PARÁGRAFOS DA WIKIPEDIA SOBRE PYTHON'
     body = f"""
+        <img src = "cid:python_logo" alt = "Python Logo"><br>
         <i>Clique <a href = "https://pt.wikipedia.org/wiki/Python">aqui</a> para saber mais sobre o assunto</i><br>
         <h1>RESUMO</h1>
         <p>{txt1}</p>
         <p>{txt2}</p>
-        <img src = "cid:python_logo" alt = "Python Logo">
+        
     """
 
     # ----------------- conexão ---------------------
