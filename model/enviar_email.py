@@ -57,6 +57,4 @@ def enviar_email(txt1,txt2):
     print(f'\nEMAIL ENVIADO COM SUCESSO PARA: {receiver}\n')
 
     file_path = 'C:\\Users\\enzzo.nogueira\\Desktop\\python_logo.png'
-    # file_path_removed = 'C:\\Users\\enzzo.nogueira\\Downloads\\python_logo-removebg-preview.png'
     os.remove(file_path)
-    # os.remove(file_path_removed)
