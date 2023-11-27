@@ -30,12 +30,13 @@ def remove():
     time.sleep(1)
     
     nome = 'C:\\Users\\enzzo.nogueira\\Desktop\\bot_selenium\\nome.png'
-    p.locateCenterOnScreen(nome)
+    p.locateCenterOnScreen(nome, confidence=0.9)
     while nome != True:
-        p.locateCenterOnScreen(nome)
+        p.locateCenterOnScreen(nome, confidence=0.9)
         time.sleep(1)
+        print('nao')
     p.click()
-    p.typewrite("C:/Users/enzzo.nogueira/Desktop/python_logo.png", 0.15)
+    p.typewrite("C:\\Users\\enzzo.nogueira\\Desktop\\python_logo.png", 0.15)
     p.typewrite('\n')
 
     # --------- download --------------
@@ -47,9 +48,9 @@ def remove():
 
     # -------------- salvar -----------
     salvar = 'C:\\Users\\enzzo.nogueira\\Desktop\\bot_selenium\\salvar.png'
-    p.locateCenterOnScreen(salvar)
+    p.locateCenterOnScreen(salvar, confidence=0.9)
     while salvar != True:
-        p.locateCenterOnScreen(salvar)
+        p.locateCenterOnScreen(salvar, confidence=0.9)
         time.sleep(1)
     p.click(salvar)
     # python_logo-removebg-preview.png => nome do arquivo salvo
