@@ -64,8 +64,7 @@ def remove():
     img_fechar_pagina = 'C:\\Users\\enzzo.nogueira\\Desktop\\bot_selenium\\fechar_pagina.png'
     fechar_pagina = p.locateCenterOnScreen(img_fechar_pagina, confidence=0.9)
 
-    if fechar_pagina != None:
-        time.sleep(1)
-        p.click(fechar_pagina)
+    time.sleep(1)
+    p.click(fechar_pagina)
     
     # python_logo-removebg-preview.png => nome do arquivo salvo
