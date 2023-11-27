@@ -14,7 +14,7 @@ def remove():
 
     # ----------- fechar -------------
 
-    WebDriverWait(driver, 10)(
+    WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div[5]/div/div[1]/div/div/div/div/div/button'))
     )
     fechar = driver.find_element(By.XPATH, '/html/body/div[1]/div[5]/div/div[1]/div/div/div/div/div/button')
@@ -22,7 +22,7 @@ def remove():
     time.sleep(1)
 
     # ----------------- upload ---------------
-    WebDriverWait(driver, 10)(
+    WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/main/div[2]/div[1]/div/div/div/div[2]/div[2]/button'))
     )
     botao = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[1]/div/div/div/div[2]/div[2]/button')
@@ -39,8 +39,8 @@ def remove():
     p.typewrite('\n')
 
     # --------- download --------------
-    WebDriverWait(driver, 10)(
-        EC.presence_of_element_located(By.XPATH, '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div[2]/button')
+    WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div[2]/button'))
     )
     download = driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div[2]/button')
     download.click()
