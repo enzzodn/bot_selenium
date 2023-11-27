@@ -48,7 +48,7 @@ def remove():
     download = driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div[2]/button')
     download.click()
     time.sleep(1)
-    
+
     # -------------- salvar -----------
     img_salvar = 'C:\\Users\\enzzo.nogueira\\Desktop\\bot_selenium\\salvar.png'
     salvar = p.locateCenterOnScreen(img_salvar, confidence=0.9)
@@ -58,4 +58,14 @@ def remove():
         salvar = p.locateCenterOnScreen(img_salvar, confidence=0.9)
 
     p.click(salvar)
+
+    # ------------ fechar pagina -------------
+
+    img_fechar_pagina = 'C:\\Users\\enzzo.nogueira\\Desktop\\bot_selenium\\fechar_pagina.png'
+    fechar_pagina = p.locateCenterOnScreen(img_fechar_pagina, confidence=0.9)
+
+    if fechar_pagina != None:
+        time.sleep(1)
+        p.click(fechar_pagina)
+    
     # python_logo-removebg-preview.png => nome do arquivo salvo
