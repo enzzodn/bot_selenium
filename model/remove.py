@@ -37,7 +37,7 @@ def remove():
         nome = p.locateCenterOnScreen(img_nome, confidence=0.9)
         print('nao')
 
-    p.click()
+    p.click(nome)
     p.typewrite("C:\\Users\\enzzo.nogueira\\Desktop\\python_logo.png", 0.1)
     p.typewrite('\n')
 
