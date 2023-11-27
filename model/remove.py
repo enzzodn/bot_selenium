@@ -40,6 +40,16 @@ def remove():
     p.click(nome)
     p.typewrite("C:\\Users\\enzzo.nogueira\\Desktop\\python_logo.png", 0.1)
     p.typewrite('\n')
+    time.sleep(1)
+
+    # --------------- se for um robo ---------------
+
+    img_sou_humano = 'C:\\Users\\enzzo.nogueira\\Desktop\\bot_selenium\\sou_humano.png'
+    sou_humano = p.locateCenterOnScreen(img_sou_humano, confidence=0.9)
+
+    if sou_humano == True:
+        p.click(sou_humano)
+        time.sleep(1)
 
     # --------- download --------------
     WebDriverWait(driver, 10).until(
