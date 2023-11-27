@@ -24,8 +24,9 @@ def remove():
         p.locateCenterOnScreen(nome)
         time.sleep(1)
     p.click()
-    p.typewrite('C:\Users\enzzo.nogueira\Desktop\python_logo.png' + '\n')
-
+    p.typewrite('C:\Users\enzzo.nogueira\Desktop\python_logo.png')
+    p.typewrite('\n')
+    
     # --------- download --------------
     WebDriverWait(
         EC.presence_of_element_located(By.XPATH, '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div[2]/button')
