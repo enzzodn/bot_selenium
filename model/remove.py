@@ -9,10 +9,21 @@ import pyautogui as p
 def remove():
     driver = webdriver.Chrome()
     driver.get('https://www.remove.bg/pt-br')
+    driver.maximize_window()
+    time.sleep(2)
+
+    # ----------- fechar -------------
+
+    WebDriverWait(driver, 10)(
+        EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/div[5]/div/div[1]/div/div/div/div/div/button'))
+    )
+    fechar = driver.find_element(By.XPATH, '/html/body/div[1]/div[5]/div/div[1]/div/div/div/div/div/button')
+    fechar.click()
+    time.sleep(1)
 
     # ----------------- upload ---------------
-    WebDriverWait(
-        EC.presence_of_element_located(By.XPATH, '/html/body/div[1]/main/div[2]/div[1]/div/div/div/div[2]/div[2]/button')
+    WebDriverWait(driver, 10)(
+        EC.presence_of_element_located((By.XPATH, '/html/body/div[1]/main/div[2]/div[1]/div/div/div/div[2]/div[2]/button'))
     )
     botao = driver.find_element(By.XPATH, '/html/body/div[1]/main/div[2]/div[1]/div/div/div/div[2]/div[2]/button')
     botao.click()
@@ -24,11 +35,11 @@ def remove():
         p.locateCenterOnScreen(nome)
         time.sleep(1)
     p.click()
-    p.typewrite('C:\Users\enzzo.nogueira\Desktop\python_logo.png')
+    p.typewrite("C:/Users/enzzo.nogueira/Desktop/python_logo.png", 0.15)
     p.typewrite('\n')
-    
+
     # --------- download --------------
-    WebDriverWait(
+    WebDriverWait(driver, 10)(
         EC.presence_of_element_located(By.XPATH, '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div[2]/button')
     )
     download = driver.find_element(By.XPATH, '/html/body/div[1]/main/div/div/div/div/div[2]/div[2]/div[2]/button')
