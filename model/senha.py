@@ -1,1 +1,1 @@
-senha_email = 'boke txmp gjby aheh'
+senha_email = 'sua senha de email (verificação em duas etapas)'
